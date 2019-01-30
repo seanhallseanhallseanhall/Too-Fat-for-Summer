@@ -67,10 +67,44 @@ h2 {
     padding: 7px 0;
 }
 
+.super-top-nav h1 {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    transition: all .2s ease-in-out;
+}
+
 .super-nav-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     
+}
+
+#navbar-brand {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Cutive Mono', monospace;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: absolute;
+        
+}
+
+/* @media all and (min-midth: 1475px){
+    .side-nav-title {
+        position: absolute;
+        top: 8px;
+        left: 21px;
+    }
+} */
+
+
+#hidden-title > a {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Cutive Mono', monospace;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 /* .navbar-nav {
@@ -126,18 +160,17 @@ h2 {
 }
 
 /* ===============================
-                SAMPLES
+                MEDIA
    =============================== */
 /* #media-title {
     margin: 200px auto;
 } */
 
 #media-cover {
-    height: 50vh;
-    min-height: 300px;
+    /* height: 50vh;
+    min-height: 300px; */
     background-color: rgba(0, 0, 0, .5);
-    /* background-image: url(../img/Band/media-splash.jpg);
-    background-size: cover; */
+
 }
 
 /* #media-conetent-inner {
@@ -163,7 +196,7 @@ h2 {
 
 .album-img {
     margin:  0;
-    padding: 0 0 0 0;
+    /* padding: 0 0 0 0; */
     position: relative;    
 }
 
@@ -182,6 +215,12 @@ h2 {
 .play-sample h4 {
     font-weight: 700;
     
+}
+
+@media all and (min-width: 768px) {
+    .album-img {
+        padding: 0;
+    }
 }
 
 /* ===============================

@@ -21,12 +21,6 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 
-    <!-- animate.css -->
-    <link rel="stylesheet" href="css/animate/animate.css">
-
-    <!-- Magnific Popup core CSS file -->
-    <link rel="stylesheet" href="css/mag/magnific-popup.css">
-
     <!-- Owl -->
     <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
@@ -49,11 +43,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <!-- <a class="navbar-brand" href="#landing">
-                            <img src="img/flowgo.png" class="img-responsive" alt="omg">
-                        </a> -->
+                        <a class="navbar-brand side-nav-title" href="#home">
+                            <h3>this is something</h3></a>
                     </div>
                     <div id="super-menu" class="collapse navbar-collapse">
+                        <div id="hidden-title">
+                                <a class="smooth-scroll" href="#home"></a>
+                        </div>
                         <ul class="nav navbar-nav">
                             <li><a class="smooth-scroll" href="#home">Home</a></li>
                             <li><a class="smooth-scroll" href="#media">Media</a></li>
@@ -65,10 +61,14 @@
                     </div>
                 </div>
             </div>
+            <div id="too-fat">
+                    <h1>Too Fat for<br>Summer</h1>
+            </div>
         </nav>
     </header>
     <!-- BOOK -->
 
+    
 
     <!-- HOME -->
     <section id="home">
@@ -78,7 +78,6 @@
                     <div id="home-body-heading" class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1>This is a change</h1>
                             </div>
                         </div>
                     </div>
@@ -101,64 +100,64 @@
                     <h2>Media</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-sm-6 col-md-4 col-md-offset-1">
                         <div class="play-sample">
                             <div class="row">
-                                <div class="col-md-3 album-img">
+                                <div class="col-xs-3 album-img">
                                     <img src="img/tsp-mcatis.jpg" alt="smashingPumpkins" class="img-responsive">
                                     <div class="play-btn">
                                         <img src="img/play-02.png" alt="playplay" class="img-responsive">
                                     </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-xs-9">
                                     <h4>Smashing Pumpkins</h4>
                                     <h5>Bullet with Butterfly Wings</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-2">
+                    <div class="col-sm-6 col-md-4 col-md-offset-2">
                         <div class="play-sample">
                             <div class="row">
-                                <div class="col-md-3 album-img">
+                                <div class="col-xs-3 album-img">
                                     <img src="img/ff-cats.jpg" alt="fooFighters" class="img-responsive">
                                     <div class="play-btn">
                                         <img src="img/play-02.png" alt="playplay" class="img-responsive">
                                     </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-xs-9">
                                     <h4>Foo Fighters</h4>
                                     <h5>Everlong</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-sm-6 col-md-4 col-md-offset-1">
                         <div class="play-sample">
                             <div class="row">
-                                <div class="col-md-3 album-img">
+                                <div class="col-xs-3 album-img">
                                     <img src="img/wzr-b.jpg" alt="weezer" class="img-responsive">
                                     <div class="play-btn">
                                         <img src="img/play-02.png" alt="playplay" class="img-responsive">
                                     </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-xs-9">
                                     <h4>Weezer</h4>
                                     <h5>Say It Aint So</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-2">
+                    <div class="col-sm-6 col-md-4 col-md-offset-2">
                         <div class="play-sample">
                             <div class="row">
-                                <div class="col-md-3 album-img">
+                                <div class="col-xs-3 album-img">
                                     <img src="img/aic-dirt.jpg" alt="aliceInChains" class="img-responsive">
                                     <div class="play-btn">
                                         <img src="img/play-02.png" alt="playplay" class="img-responsive">
                                     </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-xs-9">
                                     <h4>Alice in Chains</h4>
                                     <h5>Rooster</h5>
                                 </div>
@@ -170,6 +169,7 @@
     </section>
 
     <!-- SHOWS -->
+    <!-- collapse buttons -->
     <section id="shows">
             <div class="content-box">
                     <div class="content-title">
@@ -178,7 +178,17 @@
                 </div>
         <div id="show-container">
             <div id="shows-content">
-
+                <div class="show-card">
+                    <a class="btn btn-primary" role="button" data-toggle="collapse" href="#blooze-bar" aria-expanded="false" aria-controls="collapseExample">
+                        Link with href
+                    </a>
+                    <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Link with href
+                    </a>
+                </div>
+                <div class="collapse" id="blooze-bar">
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -223,6 +233,8 @@
             <div class="content-box">
                     <div class="content-title">
                         <h2>Contact</h2>
+                        <!-- CONTACT -->
+    <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>
                     </div>
                 </div>
         
@@ -233,12 +245,6 @@
 
     <!--bootstrap-->
     <script src="js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- WOW js -->
-    <script src="js/wow/wow.min.js"></script>
-
-    <!-- magnific -->
-    <script src="js/mag/jquery.magnific-popup.min.js"></script>
 
     <!-- Owl JS -->
     <script src="js/owl/owl.carousel.min.js"></script>
