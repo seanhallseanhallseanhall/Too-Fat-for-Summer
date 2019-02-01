@@ -7,31 +7,45 @@ body {
 
 h1 {
     font-family: 'Cutive Mono', monospace;
-    font-size: 70px;
+    font-size: 8rem;
     margin: 10px auto;
     padding: 0;
     text-align: center;
-                
+
 }
 
 h2 {
     font-family: 'Cutive Mono', monospace;
-    font-size: 40px;
+    font-size: 5rem;
     margin: 10px auto;
     padding: 0;
     text-align: center;
-                
+
 }
 
-/* .content-title h2 {
+.btn-white {
+    border: 1;
+    border-width: 1px;
+    border-color: #fff;
+    border-radius: 0;
+    color: #fff;
+    font-size: 1rem;
     font-family: 'Cutive Mono', monospace;
-    font-size: 30px;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-} */
+    transition: .2s;
+}
 
-.btn
+.btn-white:hover,
+.btn-white:focus {
+    color: #000;
+    background-color: #fff;
+}
+
+#booking-btn {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
 
 /* ===============================
                 NAV
@@ -49,7 +63,7 @@ h2 {
 }
 
 .navbar-toggle {
-    background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid #fff;
     border-radius: 0;
 }
@@ -59,11 +73,11 @@ h2 {
 }
 
 .navbar-collapse {
-    max-height: none !important;
+    max-height: auto;
 }
 
 .super-top-nav {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 7px 0;
 }
 
@@ -71,13 +85,13 @@ h2 {
     opacity: 0;
     height: 0;
     margin: 0;
+    transition-delay: all .2;
     transition: all .2s ease-in-out;
 }
 
 .super-nav-wrapper {
     display: flex;
     justify-content: flex-end;
-    
 }
 
 #navbar-brand {
@@ -87,19 +101,9 @@ h2 {
     letter-spacing: 2px;
     font-weight: 700;
     position: absolute;
-        
 }
 
-/* @media all and (min-midth: 1475px){
-    .side-nav-title {
-        position: absolute;
-        top: 8px;
-        left: 21px;
-    }
-} */
-
-
-#hidden-title > a {
+#hidden-title>a {
     color: #fff;
     font-size: 40px;
     font-family: 'Cutive Mono', monospace;
@@ -107,11 +111,7 @@ h2 {
     font-weight: 700;
 }
 
-/* .navbar-nav {
-    float: right;
-} */
-
-.navbar-nav > li > a {
+.navbar-nav>li>a {
     color: #fff;
     font-size: 20px;
     font-family: 'Cutive Mono', monospace;
@@ -119,63 +119,64 @@ h2 {
     font-weight: 700;
 }
 
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    background:none;
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+    background: none;
     color: rgb(160, 160, 160);
-    
+
 }
 
 #super-menu ul li.active a {
     color: #fff;
     border: 1px solid #fff;
+}
+
+.navbar-brand {
+    font-family: 'Cutive Mono', monospace;
 
 
+    color: white;
+    float: left;
 }
 
 /* ===============================
                 COVER
    =============================== */
 
-/* #home{
-    height: 100%;
-    
-} */
-
 #home-cover {
     height: 100vh;
-   
+
 
 }
 
 #home-content {
     width: 100%;
     height: 100%;
-    display: table;
 
 }
 
 #home-content-inner {
-    display: table-cell;
-    vertical-align: middle;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+#too-fat {
+    margin-top: 150px;
 }
 
 /* ===============================
                 MEDIA
    =============================== */
-/* #media-title {
-    margin: 200px auto;
-} */
 
 #media-cover {
-    /* height: 50vh;
-    min-height: 300px; */
-    background-color: rgba(0, 0, 0, .5);
-
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
 }
 
-/* #media-conetent-inner {
-    display: table-cell;
-} */
+.media-info p {
+    margin: 0;
+    padding: 0 0 30px 0;
+}
 
 .play-sample {
     margin: 10px 0;
@@ -183,24 +184,33 @@ h2 {
     background-color: rgba(255, 255, 255, 0.1);
     transition: .3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
+    max-height: 10vh;
 }
 
 .play-sample:hover {
     background-color: rgba(90, 90, 90, 0.5);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
-} 
+}
 
 .play-sample:hover .play-btn {
     opacity: .50;
 }
 
 .album-img {
-    margin:  0;
-    /* padding: 0 0 0 0; */
-    position: relative;    
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+.album-img img {
+    max-height: 10vh;
+    padding: 0;
+    margin: 0;
 }
 
 .play-btn {
+    margin: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -209,33 +219,119 @@ h2 {
 }
 
 .play-sample .play-btn:hover {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .play-sample h4 {
     font-weight: 700;
-    
 }
 
-@media all and (min-width: 768px) {
-    .album-img {
-        padding: 0;
-    }
+#sample-container {
+    padding-bottom: 20px;
+}
+
+
+
+/* ===============================
+                SHOWS
+   =============================== */
+   .show-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    margin: 12px;
+    padding: 5px;
+}
+
+.show-card i {
+    padding: 10px;
+    margin: 0;
+    background-color: #242424;
+    text-align: center;
+}
+
+.show-card p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.gmap {
+    margin: 0;
 }
 
 /* ===============================
                 MERCH
    =============================== */
+.merch {
+    max-width: 300px;
+}
 
-   .merch {
-       max-width: 300px;
+#merch-carousel {
+    padding: 20px 0 10px 0;
+}
+
+/* ===============================
+             CONTACTS
+   =============================== */
+
+   #contact {
+    background-color: #000;
+   }
+
+   .social-list {
 
    }
 
-   #merch-carousel {
-       padding: 20px 0 10px 0;
-   }
+   .social-list li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+}
 
-   .owl-dots {
-       padding: 12px;
-   }
+.social-list a {
+    color: white;
+}
+
+
+
+/* ===============================
+                COMING
+   =============================== */
+
+.cons-holder {
+    height: 100vh;
+    background-image: url('../img/Band/cons-splash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* padding: 0;
+        margin: 0; */
+}
+
+#cons-tfs {
+    font-family: 'Cutive Mono', monospace;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 50px;
+
+}
+
+#cons-message {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 30px;
+}
+
+/* .cons-title {
+        padding: 0;
+        margin: 0;
+}
+
+    .cons-title p {
+        font-family: "Raleway", sans-serif;
+        text-align: center;
+        font-size: 5rem;
+        padding:0px;
+        margin: 0;
+    } */
