@@ -3,14 +3,28 @@ body {
     letter-spacing: 1px;
     background-color: #242424;
     color: #fff;
+
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #cfcfcf;
 }
 
 h1 {
     font-family: 'Cutive Mono', monospace;
     font-size: 8rem;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
+
+}
+
+h1 span {
+    background-color: #000;
 
 }
 
@@ -20,23 +34,29 @@ h2 {
     margin: 10px auto;
     padding: 0;
     text-align: center;
+}
 
+h3 {
+    font-family: 'Cutive Mono', monospace;
+}
+
+h4 {
+    font-family: 'Cutive Mono', monospace;
 }
 
 .btn-white {
-    border: 1;
     border-width: 1px;
     border-color: #fff;
     border-radius: 0;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Cutive Mono', monospace;
     transition: .2s;
 }
 
 .btn-white:hover,
 .btn-white:focus {
-    color: #000;
+    color: #cfcfcf;
     background-color: #fff;
 }
 
@@ -62,8 +82,12 @@ h2 {
     transition: all .2s ease-in-out;
 }
 
+.navbar-header {
+    position: relative;    
+}
+
 .navbar-toggle {
-    background-color: rgba(0, 0, 0, 0.0);
+    /* background-color: rgba(0, 0, 0, 1); */
     border: 1px solid #fff;
     border-radius: 0;
 }
@@ -77,7 +101,7 @@ h2 {
 }
 
 .super-top-nav {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 1);
     padding: 7px 0;
 }
 
@@ -92,15 +116,26 @@ h2 {
 .super-nav-wrapper {
     display: flex;
     justify-content: flex-end;
+    font-size: 1rem;
 }
 
-#navbar-brand {
-    color: #fff;
-    font-size: 40px;
+.navbar-brand {
     font-family: 'Cutive Mono', monospace;
-    letter-spacing: 2px;
-    font-weight: 700;
+    /* padding-left: 2px; */
+    font-size: 2rem;
     position: absolute;
+    left: 2%;
+    padding-left: 0;
+}
+
+.navbar-brand a {
+    padding: 0;
+}
+
+@media all and (min-width:895px) {
+    .navbar-brand {
+        font-size: 3rem;
+    }
 }
 
 #hidden-title>a {
@@ -113,7 +148,7 @@ h2 {
 
 .navbar-nav>li>a {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-family: 'Cutive Mono', monospace;
     letter-spacing: 2px;
     font-weight: 700;
@@ -131,28 +166,23 @@ h2 {
     border: 1px solid #fff;
 }
 
-.navbar-brand {
-    font-family: 'Cutive Mono', monospace;
 
-
-    color: white;
-    float: left;
-}
 
 /* ===============================
                 COVER
    =============================== */
-
-#home-cover {
+#home {
+    margin: 0;
     height: 100vh;
+}
 
-
+#title-text {
+    background-color: #000;
 }
 
 #home-content {
     width: 100%;
     height: 100%;
-
 }
 
 #home-content-inner {
@@ -162,18 +192,21 @@ h2 {
 
 #too-fat {
     margin-top: 150px;
+
 }
 
 /* ===============================
-                MEDIA
+                MUSIC
    =============================== */
-
-#media-cover {
-    height: 100%;
+#music {
     background-color: rgba(0, 0, 0, .6);
 }
 
-.media-info p {
+#sample-container {
+    padding-bottom: 20px;
+}
+
+.music-info p {
     margin: 0;
     padding: 0 0 30px 0;
 }
@@ -185,6 +218,9 @@ h2 {
     transition: .3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
     max-height: 10vh;
+    max-width: 290px;
+    min-height: 80px;
+    
 }
 
 .play-sample:hover {
@@ -207,6 +243,7 @@ h2 {
     max-height: 10vh;
     padding: 0;
     margin: 0;
+    min-height: 80px;
 }
 
 .play-btn {
@@ -226,20 +263,24 @@ h2 {
     font-weight: 700;
 }
 
-#sample-container {
-    padding-bottom: 20px;
-}
-
-
-
 /* ===============================
                 SHOWS
    =============================== */
-   .show-card {
+#shows {
+    padding-bottom: 50px;
+
+}
+
+.show-card {
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
     margin: 12px;
     padding: 5px;
+    transition: .2s;
+}
+
+.show-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .show-card i {
@@ -249,19 +290,29 @@ h2 {
     text-align: center;
 }
 
-.show-card p {
+.show-card h4 {
     margin: 0;
     padding: 0;
     display: inline;
 }
 
-.gmap {
-    margin: 0;
+.show-card p {
+    padding: 10px 0 20px;
+
 }
+
+.p-positioner {
+    float: left;
+}
+
 
 /* ===============================
                 MERCH
    =============================== */
+#merch {
+    background-color: #000;
+}
+
 .merch {
     max-width: 300px;
 }
@@ -274,15 +325,94 @@ h2 {
              CONTACTS
    =============================== */
 
-   #contact {
+#contact {
+    background-image: url(../img/Band/jose-splash1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+#contact h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#contact .content-box {
+    
+    background-color: #000000bb;
+}
+
+#contact>.content-box {
+    position: relative;
+}
+
+#contact-left {
+    padding-top: 50px;
+}
+
+#contact-left p {
+    padding-top: 30px;
+}
+
+#contact-right {
+    padding-top: 50px;
+}
+
+#contact-right p {
+    padding-left: 7px;
+}
+
+.form-control {
+    margin: 5px
+}
+
+#send-message {
+    padding: 12px 0 56px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+@media all and (min-width: 895px) {
+    #send-message {
+        
+        display: inherit;
+        padding: 12px 0 12px 0;
+    }
+}
+
+/* @media all and (min-width: 895px) {
+    #send-message {
+        padding: 12px 0 12px 0;
+    }
+} */
+
+#send-message a {
+   
     background-color: #000;
-   }
+}
 
-   .social-list {
+/* #contact-info {
+    padding-top: 20px;
+} */
 
-   }
+.social-list {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 1;
+}
 
-   .social-list li {
+.social-list .btn {
+    background-color: #000;
+}
+
+.social-list li {
     list-style: none;
     display: inline-block;
     padding: 5px;
@@ -298,22 +428,39 @@ h2 {
                 COMING
    =============================== */
 
-.cons-holder {
+#coming-soon {
     height: 100vh;
     background-image: url('../img/Band/cons-splash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* padding: 0;
-        margin: 0; */
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-#cons-tfs {
-    font-family: 'Cutive Mono', monospace;
+#com-tfs {
+    padding: 0;
+    margin: 0;
     text-align: center;
-    font-size: 5rem;
-    padding-top: 50px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
 
+#com-tfx h1 {
+    max-width: 40%;
+}
+
+#com-tfs p {
+    font-size: 5rem;
+    margin-top: 25px;
+}
+
+#com-tfs a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #cons-message {
@@ -321,17 +468,12 @@ h2 {
     text-align: center;
     font-size: 4rem;
     padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
 }
 
-/* .cons-title {
-        padding: 0;
-        margin: 0;
+a:hover {
+    text-decoration: none;
 }
-
-    .cons-title p {
-        font-family: "Raleway", sans-serif;
-        text-align: center;
-        font-size: 5rem;
-        padding:0px;
-        margin: 0;
-    } */
