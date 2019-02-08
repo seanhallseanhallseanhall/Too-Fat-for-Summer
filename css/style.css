@@ -3,7 +3,6 @@ body {
     letter-spacing: 1px;
     background-color: #242424;
     color: #fff;
-
 }
 
 a {
@@ -16,16 +15,20 @@ a:hover {
 
 h1 {
     font-family: 'Cutive Mono', monospace;
-    font-size: 8rem;
+    font-size: 4rem;
     margin: 0 auto;
     padding: 0;
     text-align: center;
+}
 
+@media all and (min-width: 378px) {
+    h1 {
+        font-size: 6rem;
+    }
 }
 
 h1 span {
     background-color: #000;
-
 }
 
 h2 {
@@ -83,11 +86,10 @@ h4 {
 }
 
 .navbar-header {
-    position: relative;    
+    position: relative;
 }
 
 .navbar-toggle {
-    /* background-color: rgba(0, 0, 0, 1); */
     border: 1px solid #fff;
     border-radius: 0;
 }
@@ -121,7 +123,6 @@ h4 {
 
 .navbar-brand {
     font-family: 'Cutive Mono', monospace;
-    /* padding-left: 2px; */
     font-size: 2rem;
     position: absolute;
     left: 2%;
@@ -158,7 +159,6 @@ h4 {
 .navbar-nav>li>a:focus {
     background: none;
     color: rgb(160, 160, 160);
-
 }
 
 #super-menu ul li.active a {
@@ -166,14 +166,13 @@ h4 {
     border: 1px solid #fff;
 }
 
-
-
 /* ===============================
                 COVER
    =============================== */
 #home {
     margin: 0;
-    height: 100vh;
+    height: 65vh;
+    background-color: rgba(0, 0, 0, .6);
 }
 
 #title-text {
@@ -192,7 +191,6 @@ h4 {
 
 #too-fat {
     margin-top: 150px;
-
 }
 
 /* ===============================
@@ -220,7 +218,6 @@ h4 {
     max-height: 10vh;
     max-width: 290px;
     min-height: 80px;
-    
 }
 
 .play-sample:hover {
@@ -236,7 +233,6 @@ h4 {
     margin: 0;
     padding: 0;
     position: relative;
-
 }
 
 .album-img img {
@@ -268,7 +264,6 @@ h4 {
    =============================== */
 #shows {
     padding-bottom: 50px;
-
 }
 
 .show-card {
@@ -298,7 +293,6 @@ h4 {
 
 .show-card p {
     padding: 10px 0 20px;
-
 }
 
 .p-positioner {
@@ -325,23 +319,24 @@ h4 {
              CONTACTS
    =============================== */
 
-#contact {
-    background-image: url(../img/Band/jose-splash1.jpg);
+#contact {    
+    background-image: url(../img/Band/jose-splash2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    
 }
 
-#contact h2,h3,h4 {
+#contact h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
     text-align: left;
 }
 
 #contact .content-box {
-    
+    height: calc(100vh - 66px);
     background-color: #000000bb;
 }
 
@@ -373,31 +368,18 @@ h4 {
     padding: 12px 0 56px 0;
     display: flex;
     justify-content: center;
-    
 }
 
 @media all and (min-width: 895px) {
     #send-message {
-        
         display: inherit;
         padding: 12px 0 12px 0;
     }
 }
 
-/* @media all and (min-width: 895px) {
-    #send-message {
-        padding: 12px 0 12px 0;
-    }
-} */
-
 #send-message a {
-   
     background-color: #000;
 }
-
-/* #contact-info {
-    padding-top: 20px;
-} */
 
 .social-list {
     padding: 0;
@@ -471,7 +453,6 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
 }
 
 a:hover {
